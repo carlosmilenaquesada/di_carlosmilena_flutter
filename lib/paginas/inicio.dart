@@ -6,6 +6,8 @@ import '../componentes/lista_redonda.dart';
 
 class InicioPage extends StatelessWidget {
   var imagenes = List.of({});
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
 import 'nav_bar_superior.dart';
+
 class CartelPrincipal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
       cabecera(),
       infoSerie(),
-      botonera(),
+      botonera(context),
     ]);
   }
-
-
 
   Widget cabecera() {
     return Column(
@@ -19,9 +18,7 @@ class CartelPrincipal extends StatelessWidget {
         Container(
             height: 50.0,
             width: double.infinity,
-            child:
-            SafeArea(child: NavBarSuperior())
-        ),
+            child: SafeArea(child: NavBarSuperior())),
         Image.network(
             "https://github.com/carlosmilenaquesada/di_repositorio_imagenes/blob/main/pokemon_logo.png?raw=true",
             fit: BoxFit.cover),
@@ -37,14 +34,10 @@ class CartelPrincipal extends StatelessWidget {
                 Colors.white30 // a negro
               ])),
         )
-
-
       ],
     );
   }
 }
-
-
 
 Widget infoSerie() {
   return Row(
@@ -55,7 +48,6 @@ Widget infoSerie() {
         color: Colors.black,
         size: 15.0,
       ),
-
       Text(
         "Pokedex",
         style: TextStyle(color: Colors.black, fontSize: 15.0, letterSpacing: 5),
@@ -69,40 +61,17 @@ Widget infoSerie() {
   );
 }
 
-Widget botonera() {
+Widget botonera(BuildContext context) {
   return Padding(
+    padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 1.0),
+    child: TextButton(
+      child: const Text("Ver pokédex",
+        style: TextStyle(color: Colors.black, fontSize: 15.0, letterSpacing: 5),),
+      onPressed: () {
+        Navigator.pushNamed(context, '/second');
 
-      padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 1.0),
-
-      child: Row(
-
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Column(children: const [
-            Icon(
-              Icons.check,
-              color: Colors.black,
-            ),
-            Text(
-              "Ver pokédex",
-              style: TextStyle(color: Colors.black, fontSize: 9.0),
-            )
-          ]),
-          TextButton(
-            child: const Text('Capturar'),
-            onPressed: () {},
-            style: TextButton.styleFrom(backgroundColor: Colors.blueAccent),
-          ),
-          Column(children: const [
-            Icon(
-              Icons.info,
-              color: Colors.black,
-            ),
-            Text(
-              "Información",
-              style: TextStyle(color: Colors.black, fontSize: 9.0),
-            )
-          ])
-        ],
-      ));
+      },
+      style: TextButton.styleFrom(backgroundColor: Colors.blueAccent),
+    ),
+  );
 }
