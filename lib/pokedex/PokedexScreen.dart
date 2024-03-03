@@ -28,7 +28,7 @@ class Inicio extends StatefulWidget {
 /*---------------------------------------------------*/
 
 class _InicioState extends State<Inicio> {
-  Future<List<Pokemon>?> _listadoPokemon = Future.value(); // esperar a resolver
+  Future<List<Pokemon>?> _listadoPokemon = Future.value();
 
   Future<List<Pokemon>> _getPokemon() async {
     String urlString =
@@ -44,10 +44,25 @@ class _InicioState extends State<Inicio> {
       for (var item in jsonData["data"]) {
 
 
-        log(item["name"]["english"].toString());
+        String tipos = item["type"].toString();
+        tipos = tipos
+            .replaceAll("[", "")
+            .replaceAll("]", "")
+            .replaceAll(", ", " - ");
 
-        pokemon.add(Pokemon(item["name"]["english"], item["image"]["hires"]));
+        String id = item["id"].toString();
+        if (id.length == 1) {
+          id = "N.º 00" + id;
+        } else {
+          if (id.length == 2) {
+            id = "N.º 0" + id;
+          } else {
+            id = "N.º " + id;
+          }
+        }
 
+        pokemon.add(Pokemon(item["name"]["english"], item["image"]["hires"], id,
+            tipos, item["description"]));
       }
       return pokemon;
     } else {
@@ -75,7 +90,8 @@ class _InicioState extends State<Inicio> {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             return ListView(
-              children: _listPokemon(snapshot.data),
+              padding: EdgeInsets.all(20),
+              children: _listPokemon(snapshot.data, context),
             );
           } else if (snapshot.hasError) {
             print(snapshot.error);
@@ -83,24 +99,114 @@ class _InicioState extends State<Inicio> {
             return Text("error");
           }
 
-          return Text("data2");
+          return Text("loading");
         },
       )),
     );
   }
 
-  List<Widget> _listPokemon(data) {
+  List<Widget> _listPokemon(data, BuildContext context) {
     List<Widget> pokemon = [];
     for (var poke in data) {
-      pokemon.add(Column(children: [
-        Image.network(
-          poke.url_imagen, //  URL de  imagen
-          width: 200.0, // Ancho de la imagen
-          height: 200.0, // Altura de la imagen
-          fit: BoxFit.contain, // Ajuste de la imagen dentro del contenedor
-        )
-      ,Text(poke.nombre)] ));
+      pokemon.add(_buildCard(poke.numero_pokedex, poke.nombre, poke.descripcion,
+          poke.url_imagen, poke.tipo, context));
+      pokemon.add(SizedBox(height: 16));
     }
     return pokemon;
+  }
+
+/*
+*
+          Column(children: [
+        Text(poke.numero_pokedex),
+        Text(poke.nombre),
+        Image.network(
+          poke.url_imagen
+        ),
+        Text(poke.tipo),
+      ])
+*
+* */
+
+  Widget _buildCard(String numero_pokedex, String nombre, String descripcion,
+      String url_imagen, String tipo, BuildContext context) {
+    return Container(
+      width: 300,
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 3,
+            blurRadius: 7,
+            offset: Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                numero_pokedex,
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+              SizedBox(width: 8),
+              Text(
+                nombre,
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 8),
+          Center(
+              child: Container(
+            width: 140,
+            height: 140,
+            child: Image.network(
+              url_imagen,
+              fit: BoxFit
+                  .cover, // Ajusta el modo de ajuste según tus necesidades
+            ),
+          )),
+          SizedBox(height: 8),
+          Text(
+            descripcion,
+            style: TextStyle(
+              fontSize: 16,
+            ),
+            textAlign: TextAlign.justify,
+          ),
+          SizedBox(height: 16),
+          Center(
+            child: Container(
+              padding: EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                // Puedes ajustar el color según tus preferencias
+                borderRadius:
+                    BorderRadius.circular(8), // Ajusta el radio de las esquinas
+              ),
+              child: Text(
+                tipo,
+                style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white), // Puedes ajustar el color del texto
+              ),
+            ),
+          ),
+          SizedBox(height: 16),
+
+        ],
+      ),
+    );
   }
 }

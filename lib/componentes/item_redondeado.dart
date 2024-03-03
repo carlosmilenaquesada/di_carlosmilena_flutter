@@ -8,6 +8,7 @@ class ItemRedondeado extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
+
         Row(
           children: [
             const SizedBox(

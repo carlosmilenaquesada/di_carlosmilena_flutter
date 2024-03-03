@@ -23,6 +23,7 @@ class ListaRedonda extends StatelessWidget {
     return Container(
         height: 150.0,
         child: ListView.builder(
+
           scrollDirection: Axis.horizontal,
           itemCount: lista_tipos.length,
           itemBuilder: (context, index) {

@@ -1,9 +1,9 @@
 class Pokemon {
-  String nombre="";
-  String url_imagen="";
+  String nombre = "";
+  String url_imagen = "";
+  String numero_pokedex = "";
+  String tipo = "";
+  String descripcion = "";
 
-  Pokemon(nombre, url_imagen) {
-    this.nombre = nombre;
-    this.url_imagen = url_imagen;
-  }
+  Pokemon(this.nombre, this.url_imagen, this.numero_pokedex, this.tipo, this.descripcion);
 }

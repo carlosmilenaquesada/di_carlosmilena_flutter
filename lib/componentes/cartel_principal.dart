@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'lista_redonda.dart';
 import 'nav_bar_superior.dart';
 
 class CartelPrincipal extends StatelessWidget {
@@ -8,6 +9,7 @@ class CartelPrincipal extends StatelessWidget {
     return Column(children: [
       cabecera(),
       infoSerie(),
+      ListaRedonda(),
       botonera(context),
     ]);
   }
@@ -43,20 +45,13 @@ Widget infoSerie() {
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: const [
-      Icon(
-        Icons.accessibility_outlined,
-        color: Colors.black,
-        size: 15.0,
-      ),
+      SizedBox(height: 100),
       Text(
-        "Pokedex",
-        style: TextStyle(color: Colors.black, fontSize: 15.0, letterSpacing: 5),
+        "Un gran reto te espera",
+        style: TextStyle(color: Colors.black, fontSize: 25.0, letterSpacing: 5),
       ),
-      Icon(
-        Icons.accessibility_outlined,
-        color: Colors.black,
-        size: 15.0,
-      ),
+
+      SizedBox(height: 100),
     ],
   );
 }
@@ -64,14 +59,39 @@ Widget infoSerie() {
 Widget botonera(BuildContext context) {
   return Padding(
     padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 1.0),
-    child: TextButton(
-      child: const Text("Ver pokédex",
-        style: TextStyle(color: Colors.black, fontSize: 15.0, letterSpacing: 5),),
-      onPressed: () {
-        Navigator.pushNamed(context, '/second');
-
-      },
-      style: TextButton.styleFrom(backgroundColor: Colors.blueAccent),
+    child: Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          TextButton(
+            child: const Text(
+              "Ver pokédex",
+              style: TextStyle(color: Colors.black, fontSize: 15.0, letterSpacing: 5),
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, '/second');
+            },
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.blue.shade100, // Fondo azul suave
+            ),
+          ),
+          SizedBox(width: 8),
+          TextButton(
+            child: const Text(
+              "Registrarse",
+              style: TextStyle(color: Colors.black, fontSize: 15.0, letterSpacing: 5),
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, '/third');
+            },
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.blue.shade100, // Fondo azul suave
+            ),
+          ),
+        ],
+      ),
     ),
   );
 }
+
+

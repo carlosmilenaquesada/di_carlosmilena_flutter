@@ -13,19 +13,18 @@ class InicioPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white30,
       body: ListView(
-        children: [CartelPrincipal(), ListaRedonda(), ListaCuadrada()],
+        children: [CartelPrincipal(),  ListaCuadrada()],
       ),
-      bottomNavigationBar: navInferior(),
+      bottomNavigationBar: navInferior(context),
     );
   }
 
-  BottomNavigationBar navInferior() {
+  BottomNavigationBar navInferior(BuildContext context) {
     return BottomNavigationBar(
       backgroundColor: Colors.white38,
       selectedItemColor: Colors.white,
       unselectedItemColor: Colors.black,
       type: BottomNavigationBarType.fixed,
-      // ignore: prefer_const_literals_to_create_immutables
       items: <BottomNavigationBarItem>[
         const BottomNavigationBarItem(icon: Icon(Icons.home), label: "Inicio"),
         const BottomNavigationBarItem(
@@ -35,6 +34,34 @@ class InicioPage extends StatelessWidget {
         const BottomNavigationBarItem(
             icon: Icon(Icons.exit_to_app), label: "Salir"),
       ],
+      onTap: (int index) {
+        _mostrarMensaje(context, "${_obtenerTextoBoton(index)}");
+      },
     );
   }
+
+  void _mostrarMensaje(BuildContext context, String mensaje) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(mensaje),
+        duration: Duration(seconds: 2),
+      ),
+    );
+  }
+
+  String _obtenerTextoBoton(int index) {
+    switch (index) {
+      case 0:
+        return "Inicio";
+      case 1:
+        return "Like";
+      case 2:
+        return "Dislike";
+      case 3:
+        return "Salir";
+      default:
+        return "";
+    }
+  }
+
 }
