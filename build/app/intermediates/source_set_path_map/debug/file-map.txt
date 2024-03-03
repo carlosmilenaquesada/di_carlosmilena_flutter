@@ -1,0 +1,12 @@
+com.example.di_carlosmilena_flutter.app-jetified-window-1.0.0-beta04-0 C:\Users\Administrador\.gradle\caches\transforms-3\05afbc50c9d5c51966c5374f153362bd\transformed\jetified-window-1.0.0-beta04\res
+com.example.di_carlosmilena_flutter.app-core-1.6.0-1 C:\Users\Administrador\.gradle\caches\transforms-3\101e8b389cb95798a7d32ea8dbc0126f\transformed\core-1.6.0\res
+com.example.di_carlosmilena_flutter.app-jetified-window-java-1.0.0-beta04-2 C:\Users\Administrador\.gradle\caches\transforms-3\a2d5f98bb763a24d25b760f2ecad7a7e\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.di_carlosmilena_flutter.app-jetified-annotation-experimental-1.1.0-3 C:\Users\Administrador\.gradle\caches\transforms-3\ae2073573988c210f76aee6cffb0c971\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.di_carlosmilena_flutter.app-debug-4 C:\Users\Administrador\Desktop\JDBC\di_carlosmilena_flutter\android\app\src\debug\res
+com.example.di_carlosmilena_flutter.app-main-5 C:\Users\Administrador\Desktop\JDBC\di_carlosmilena_flutter\android\app\src\main\res
+com.example.di_carlosmilena_flutter.app-pngs-6 C:\Users\Administrador\Desktop\JDBC\di_carlosmilena_flutter\build\app\generated\res\pngs\debug
+com.example.di_carlosmilena_flutter.app-resValues-7 C:\Users\Administrador\Desktop\JDBC\di_carlosmilena_flutter\build\app\generated\res\resValues\debug
+com.example.di_carlosmilena_flutter.app-rs-8 C:\Users\Administrador\Desktop\JDBC\di_carlosmilena_flutter\build\app\generated\res\rs\debug
+com.example.di_carlosmilena_flutter.app-mergeDebugResources-9 C:\Users\Administrador\Desktop\JDBC\di_carlosmilena_flutter\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.di_carlosmilena_flutter.app-mergeDebugResources-10 C:\Users\Administrador\Desktop\JDBC\di_carlosmilena_flutter\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.di_carlosmilena_flutter.app-merged_res-11 C:\Users\Administrador\Desktop\JDBC\di_carlosmilena_flutter\build\app\intermediates\merged_res\debug
