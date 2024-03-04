@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'item_redondeado.dart';
+import 'ElementosScrollDos.dart';
 
 class ListaRedonda extends StatelessWidget {
   List<String> lista_tipos = [

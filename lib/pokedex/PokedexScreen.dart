@@ -11,8 +11,8 @@ class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // es el estilo de la app
-      title: "Primera App", // nombre de la app
+
+      title: "Pokedex",
       home: Inicio(),
     );
   }
@@ -82,7 +82,7 @@ class _InicioState extends State<Inicio> {
       // estructura básica de una app
       // estructura de una app movil
       appBar: AppBar(
-        title: Text("Primera App Title"),
+        title: Text("Pokedex"),
       ),
       body: Center(
           child: FutureBuilder(

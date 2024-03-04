@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9858de6-3dbb-4f20-89ad-8cca57de8171" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/pokedex/Registrarse.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/d06d89adcf2c824572069e88d342a92c/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/d06d89adcf2c824572069e88d342a92c/.filecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/d06d89adcf2c824572069e88d342a92c/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/d06d89adcf2c824572069e88d342a92c/app.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/d06d89adcf2c824572069e88d342a92c/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/d06d89adcf2c824572069e88d342a92c/kernel_snapshot.d" afterDir="false" />
@@ -16,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/android/.gradle/7.6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/7.6.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/7.6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/7.6.3/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/assets/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
@@ -26,12 +24,12 @@
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/build/app/outputs/flutter-apk/app-debug.apk.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/cbff2b1535276d602df97b9656722b6e.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/cbff2b1535276d602df97b9656722b6e.cache.dill.track.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/componentes/cartel_principal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/componentes/cartel_principal.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/componentes/item_redondeado.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/componentes/item_redondeado.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/componentes/lista_redonda.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/componentes/lista_redonda.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/componentes/nav_bar_superior.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/componentes/nav_bar_superior.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/Pokemon.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/Pokemon.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/componentes/cartel_principal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/componentes/Central.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/componentes/item_cuadrado.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/componentes/ElementosScrollUno.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/componentes/item_redondeado.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/componentes/ElementosScrollDos.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/componentes/lista_cuadrada.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/componentes/ScrollUno.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/componentes/lista_redonda.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/componentes/ScrollDos.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/componentes/nav_bar_superior.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/componentes/NavegadorSuperior.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/paginas/inicio.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/paginas/inicio.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pokedex/PokedexScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pokedex/PokedexScreen.dart" afterDir="false" />
     </list>
@@ -72,7 +70,7 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrador/Desktop/flutter_navigate&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>

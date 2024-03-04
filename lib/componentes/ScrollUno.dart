@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'item_cuadrado.dart';
+import 'ElementosScrollUno.dart';
 
 class ListaCuadrada extends StatelessWidget {
 

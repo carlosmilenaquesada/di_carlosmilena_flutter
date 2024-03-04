@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'lista_redonda.dart';
-import 'nav_bar_superior.dart';
+import 'ScrollDos.dart';
+import 'NavegadorSuperior.dart';
 
 class CartelPrincipal extends StatelessWidget {
   @override

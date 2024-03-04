@@ -19,7 +19,7 @@ class ItemRedondeado extends StatelessWidget {
                 width: 110.0,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(110.0),
-                    border: Border.all(color: Colors.white)),
+                    ),
 
 
                 child: ClipOval(

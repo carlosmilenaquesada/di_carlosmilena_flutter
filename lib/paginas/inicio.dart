@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../componentes/cartel_principal.dart';
-import '../componentes/lista_cuadrada.dart';
-import '../componentes/lista_redonda.dart';
+import '../componentes/Central.dart';
+import '../componentes/ScrollUno.dart';
+import '../componentes/ScrollDos.dart';
 
 class InicioPage extends StatelessWidget {
   var imagenes = List.of({});
